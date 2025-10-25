@@ -11,7 +11,7 @@ export function CelebratesYou() {
       <div className="container mx-auto py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-center max-w-3xl mx-auto">You Don’t Just Track Progress. You Feel It.</h2>
         <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-          Earn beautiful, pastel stickers each week based on your consistency — share them or keep them private.
+          Earn beautiful rewards each week based on your consistency — share them or keep them private.
         </p>
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
