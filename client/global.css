@@ -1,0 +1,125 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   */
+  :root {
+    /* Brand palette - Calm, mindful wellness */
+    --background: 33 76% 97%; /* Cream/Sand #FDF7F0 */
+    --foreground: 233 9% 19%; /* Deep Slate #2B2C34 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 233 9% 19%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 233 9% 19%;
+
+    --primary: 13 67% 63%; /* Dusty Terracotta #E07A5F */
+    --primary-foreground: 33 76% 97%; /* Cream text on CTA */
+
+    --secondary: 82 28% 94%; /* Very light olive tint */
+    --secondary-foreground: 233 9% 19%;
+
+    --muted: 160 20% 92%; /* Soft pastel blue/sage wash */
+    --muted-foreground: 233 9% 35%;
+
+    --accent: 30 52% 72%; /* Muted Clay #DDB892 */
+    --accent-foreground: 233 9% 19%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 33 76% 97%;
+
+    --border: 28 24% 86%; /* Warm light border */
+    --input: 28 24% 86%;
+    --ring: 13 67% 63%; /* Match primary */
+
+    --radius: 1rem; /* Softer, rounded edges */
+
+    /* Sidebar (if used) */
+    --sidebar-background: 33 76% 97%;
+    --sidebar-foreground: 233 9% 19%;
+    --sidebar-primary: 13 67% 63%;
+    --sidebar-primary-foreground: 33 76% 97%;
+    --sidebar-accent: 160 20% 92%;
+    --sidebar-accent-foreground: 233 9% 19%;
+    --sidebar-border: 28 24% 86%;
+    --sidebar-ring: 13 67% 63%;
+  }
+
+  .dark {
+    --background: 233 20% 10%; /* Deep slate */
+    --foreground: 33 76% 97%; /* Cream */
+
+    --card: 233 20% 12%;
+    --card-foreground: 33 76% 97%;
+
+    --popover: 233 20% 12%;
+    --popover-foreground: 33 76% 97%;
+
+    --primary: 13 67% 63%;
+    --primary-foreground: 33 76% 97%;
+
+    --secondary: 233 16% 18%;
+    --secondary-foreground: 33 76% 97%;
+
+    --muted: 233 16% 18%;
+    --muted-foreground: 33 30% 80%;
+
+    --accent: 30 52% 40%;
+    --accent-foreground: 33 76% 97%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 33 76% 97%;
+
+    --border: 233 16% 22%;
+    --input: 233 16% 22%;
+    --ring: 13 67% 63%;
+
+    --sidebar-background: 233 20% 10%;
+    --sidebar-foreground: 33 76% 97%;
+    --sidebar-primary: 13 67% 63%;
+    --sidebar-primary-foreground: 33 76% 97%;
+    --sidebar-accent: 233 16% 18%;
+    --sidebar-accent-foreground: 33 76% 97%;
+    --sidebar-border: 233 16% 18%;
+    --sidebar-ring: 13 67% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
+
+@layer utilities {
+  .soft-shadow {
+    @apply shadow-[0_10px_30px_-10px_rgba(224,122,95,0.25)];
+  }
+  .soft-transition {
+    @apply transition-all duration-300 ease-out;
+  }
+}
